@@ -1,0 +1,252 @@
+.App {
+  text-align: center;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#cards {
+  margin-top:40px;
+  margin-left: 94px;
+}
+
+#card33, #card44, #card77, #card11, #card4, #card16, #card55, #card3, #card10 {
+  text-align: left;
+  float:left;
+  position:relative;
+}
+
+.card-panel input {
+  width: 120px;
+  height: 30px;
+}
+
+.cardcontrols button {
+  width: 120px;
+  height: 40px;
+}
+
+.cardcontrols {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 20px;
+  color: #fff;
+}
+
+.card-image {
+  width: 570px;
+}
+
+#menu, .title {
+  text-align: left;
+}
+
+#login {
+  text-align: right;
+  padding: 20px;
+}
+
+#imageDiv img {
+  width: 400px;
+}
+
+#winner, #winner img {
+  width: 1000px;
+}
+
+#winner {
+  position:relative;
+  text-align: center;
+  color: white;
+  float: left;
+}
+
+#winner button {
+}
+
+#imageDiv button, #winner button {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #DDA947;
+  border-radius: 35px;
+  opacity: 1;
+  height: 70px;
+  width: 400px;
+  font: normal normal 300 20px/25px Helvetica;
+  letter-spacing: 2px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+#loading img  {
+  height: 200px;
+}
+#loading {
+  height: 250px;
+  display: none;
+}
+#winnerControls {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-left: 20px;
+}
+
+#message {
+  float: left;
+  color: #000;
+}
+
+.nfts {
+  float: left;
+  padding : 20px;
+}
+
+.nfts img {
+  width: 400px;
+}
+
+#connect {
+  float: right;
+  padding: 20px 0px;
+  margin-right: 94px;
+}
+
+#connect {
+
+}
+
+#minter img {
+  width: 300px;
+}
+
+a {
+  text-decoration : none;
+}
+
+#menu {
+  border-bottom:1px solid #707070;
+  border-top: 1px solid #707070;
+  opacity: 1;
+  padding: 10px;
+  margin: 20px 94px;
+}
+
+#connectButton {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #DDA947;
+  border-radius: 35px;
+  opacity: 1;
+  text-align: left;
+  font: normal normal 300 20px/24px Helvetica;
+  letter-spacing: 2px;
+  color: #000000;
+  text-transform: uppercase;
+  height: 30px;
+}
+
+#homelink {
+  text-align: center;
+  font: normal normal 300 20px/24px Helvetica;
+  letter-spacing: 9.6px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.topmenu {
+  float: right;
+  text-align: center;
+  font: normal normal 300 25px/30px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  float: left;
+  font: normal normal 300 45px/55px Helvetica;
+  letter-spacing: 0px;
+  color: #DDA947;
+  opacity: 1;
+  padding-top: 15px;
+  width: 70%;
+}
+
+#titleline {
+  margin-right: 94px;
+    margin-left: 94px;
+}
+
+#prizepool {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #DDA947;
+  border-radius: 35px;
+  opacity: 1;
+  padding: 20px;
+  text-align: left;
+  font: normal normal 300 20px/25px Helvetica;
+  letter-spacing: 2px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-left: 13px;
+}
+
+#dollars {
+
+  top: 10px;
+  position: relative;
+  text-align: left;
+  font: normal normal 300 53px/64px Helvetica;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+#instructions {
+  color: #000;
+  text-align: left;
+  margin-left: 1020px;
+  margin-right: 40px;
+    font: normal normal 300 20px/25px Helvetica;
+}
+
+.nfts {
+  letter-spacing: 2px;
+}

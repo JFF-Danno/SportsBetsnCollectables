@@ -1,0 +1,45 @@
+Prediction smart contraction - require value sent, adjust price mech, security, completion process
+
+Front end - more driver panels, pricing, price feed and conversion for eth
+
+NFTs - minting contract and screen, auto process , wallet
+
+
+
+
+nov13
+
+claim amount weirdness, amounts don't add up.
+
+need to store total prizepool figure before paying out. base claims on that, not the contract balance
+
+need to cancel ability to claim after already claiming.
+
+stop mint button till you are whitelisted
+
+
+
+nov 17
+
+vrf for who can mint, start light animated gifs
+
+java external adapter for card stats but also consider a more general purpose adapter.
+
+
+
+
+
+beyond the hack
+
+fees on prediction market
+
+tx fees on nfts
+
+fees accessable by multisig wallet.
+
+checking round of the market against the round returned from the api.
+
+
+file name on minter
+
+

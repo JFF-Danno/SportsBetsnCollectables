@@ -1,0 +1,35 @@
+Compile and deploy NFT contract
+
+Compile and deploy PredictionMarket
+
+PredictionMarket.setNFTContractAddress
+
+NFTContract.setPredictionMarketContractAddress
+
+PredictionMarket create markets, 1 for each driver
+
+Update contract addresses in react app.
+
+Fund PredictionMarket with Link
+
+Start external adapter(s)
+
+Start chainlink node
+
+Start tomcat for java card image app
+
+Market Resolution
+
+close markets
+
+requestPosition - calls ext adapterand gets driver number
+
+processResults - flags winning market to payout,gets vrf random and creates a random for each user.
+
+Market Payout - User is now presented with winning panel and claim button
+                vrf random is retrieved and used to decide if the user can mint a commemorative nft
+                
+
+
+
+

@@ -1,0 +1,46 @@
+curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": { "from": "ETH", "to": "USD" } }'
+
+curl -X POST -H "content-type:application/json" "http://localhost:8080/" --data '{ "id": 0, "data": { "position": "69" } }'
+
+
+curl -X POST -H "content-type:application/json" "http://dannointerweb.com/app/ExternalAdapter" --data '{ "id": 0, "data": { "position": "69" } }'
+
+
+
+type = "directrequest"
+schemaVersion = 1
+name = "f1latestresults"
+
+contractAddress = "0x765aCc258f3a7b2D8d103D1A9310fc51b07D5425"
+maxTaskDuration = "0s"
+observationSource = """
+    decode_log   [type=ethabidecodelog
+                  abi="OracleRequest(bytes32 indexed specId, address requester, bytes32 requestId, uint256 payment, address callbackAddr, bytes4 callbackFunctionId, uint256 cancelExpiration, uint256 dataVersion, bytes data)"
+                  data="$(jobRun.logData)"
+                  topics="$(jobRun.logTopics)"]
+
+    decode_cbor  [type=cborparse data="$(decode_log.data)"]
+
+    fetch        [type=bridge name=raceresults requestData="{\\"id\\":$(jobSpec.externalJobID),\\"data\\":{\\"position\\":$(decode_cbor.position)}}"]
+    
+ //   parse        [type=jsonparse path="data,MRData,RaceTable,Results,$(decode_cbor.position),number" data="$(fetch)"]
+    parse        [type=jsonparse path="data,MRData,RaceTable,Results,0,number" data="$(fetch)"]
+
+    encode_data  [type=ethabiencode abi="(uint256 value)" data="{ \\"value\\": $(parse) }"]
+    encode_tx    [type=ethabiencode
+                  abi="fulfillOracleRequest(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes32 data)"
+                  data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\": $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}"
+                 ]
+    submit_tx    [type=ethtx to="0x765aCc258f3a7b2D8d103D1A9310fc51b07D5425" data="$(encode_tx)"]
+
+    decode_log -> decode_cbor -> fetch -> parse -> encode_data -> encode_tx -> submit_tx
+"""
+
+
+consumer sent lnik to it
+
+0x966301979f7F2BD4Dc30190b49d7515969Fa87f4
+
+###JAVA adapter ????
+
+curl -X POST -H "content-type:application/json" "http://localhost:8080/ExternalAdapter" --data '{ "id": 0, "data": { "position": "69" } }'

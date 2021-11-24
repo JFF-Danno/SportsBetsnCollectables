@@ -1,0 +1,23 @@
+## Inspiration
+A previous Chainlink hackathon video about external adapters. Also a QR code image generator I wrote from way back when they were new.
+
+## What it does
+It allows you to have a punt on the winner of the next Formula 1 race. Winning also gives you the opportunity to mint a commemorative NFT collectable card.
+The card text is automatically added using an image processing library. 
+
+## How we built it
+Prediction markets are created using a solidity smart contract which doubles as an Api consumer using a chainlink external adapter for resolving the market after completion of the race.
+Winning a share of the prize also gets you whitelisted for minting on an Erc721 smart contract. There is a standard minting page as well as one using the nftport api.
+
+## Challenges we ran into
+Being on the right testnet to develop the external adapter and prediction market and then be able to mint nfts using free minting services on polygon. I created a standard mint page used in the demo and one for nft port.
+
+## Accomplishments that we're proud of
+Managing to operate the external adapter. Creating collectable cards on the fly.
+
+## What we learned
+External adapters
+
+## What's next for Fan Focused Sports Prediction Markets with NFTs
+More market options, e.g. Pick the podium winners, pick the points earners. More work is required on the nft auto creation process.
+
